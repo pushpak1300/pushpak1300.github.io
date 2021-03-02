@@ -62,6 +62,7 @@ export default {
   },
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    'nuxt-vite',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
@@ -86,4 +87,11 @@ export default {
   colorMode: {
     classSuffix: '',
   },
+  vite: {
+    optimizeDeps: {
+      exclude: [
+        'date-fns'
+      ]
+    }
+  }
 }
